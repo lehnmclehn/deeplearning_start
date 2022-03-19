@@ -1,4 +1,5 @@
 .idea
 .gradle
-./gradle
-./model
+build
+gradle
+model

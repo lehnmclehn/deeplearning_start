@@ -14,7 +14,8 @@ class FitCallback : Callback() {
 
     override fun onEpochEnd(epoch: Int, event: EpochTrainingEvent, logs: TrainingHistory) {
         if (epoch % 10 == 0)
-            println("Epoch $epoch ends -> ${event.lossValue} | ${event.valLossValue}")
+            println("Epoch $epoch ends -> LOSS=[${event.lossValue} | ${event.valLossValue}] " +
+                    "METRIC=[${event.metricValues} | ${event.valMetricValues}]")
     }
 
     override fun onTrainBatchBegin(batch: Int, batchSize: Int, logs: TrainingHistory) {
